@@ -1,0 +1,60 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: #000;
+    min-height: 1000px;
+}
+.container{
+    position: relative;
+    overflow: hidden;
+    animation: animate 1s linear infinite;
+    
+}
+@keyframes animate{
+    0%{
+        filter: hue-rotate(0deg);
+        
+    }
+    
+    100%{
+        filter: hue-rotate(360deg);
+        
+    }
+}
+.row{
+    display: inline-flex;
+    overflow: hidden;
+}
+.row:nth-child(even){
+    margin-left: 1px;
+}
+.hexagon{
+    background: #111;
+    display: inline-flex;
+    position: relative;
+    height: 50px;
+    width: 50px;
+    margin: -8px;
+    clip-path:circle(40%);
+    transition: 2s;
+    
+}
+.hexagon:before{
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    height: 100px;
+    width: 50%;
+    background: rgba(97, 87, 77, 0.068);
+
+    
+}
+.hexagon:hover{
+    transition: -5s;
+    background: rgb(238, 56, 168);
+    
+}
